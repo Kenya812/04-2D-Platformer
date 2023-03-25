@@ -53,12 +53,6 @@ func set_animation(anim):
 	if $AnimatedSprite.frames.has_animation(anim): $AnimatedSprite.play(anim)
 	else: $AnimatedSprite.play()
 
-func is_on_floor():
-	var fl = $Floor.get_children()
-	for f in fl:
-		if f.is_colliding():
-			return true
-	return false
 
 func is_on_right_wall():
 	if $Wall/Right.is_colliding():
@@ -80,5 +74,24 @@ func set_wall_raycasts(is_enabled):
 	$Wall/Left.enabled = is_enabled
 	$Wall/Right.enabled = is_enabled
 
+func attack():
+	if $Attack.is_colliding():
+		var target = $Attack.get_collider()
+		if target.has_method("damage"):
+			target.damage()
+	if $Attack_low.is_colliding():
+		var target = $Attack_low.get_collider()
+		if target.has_method("damage"):
+			target.damage()
+
+
 func die():
 	queue_free()
+
+func _on_Coin_Collector_body_entered(body):
+	if body.name == "Coins":
+		body.get_coin(global_position)
+
+func _on_AnimatedSprite_animation_finished():
+	if $AnimatedSprite.animation == "Attacking":
+		SM.set_state("Idle")
