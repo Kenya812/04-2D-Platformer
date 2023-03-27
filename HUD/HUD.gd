@@ -6,4 +6,4 @@ func _ready():
 
 func _physics_process(_delta):
 		$Score.text = "Score: " + str(Global.score)
-		$Score.text = "Lives: " + str(Global.score)
+		$Lives.text = "Lives: " + str(Global.lives)

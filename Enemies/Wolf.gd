@@ -1,7 +1,7 @@
 extends Area2D
 
-var start = Vector2 (286,-224)
-var destination = Vector2 (605,-212)
+var start = Vector2 (-10,3)
+var destination = Vector2 (580,3)
 
 func _on_Wolf_body_entered(body):
 	if body.name == "Player": 

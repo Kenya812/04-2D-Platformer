@@ -1,7 +1,7 @@
 extends Area2D
 
-var start = Vector2 (286,-224)
-var destination = Vector2 (605,-212)
+var start = Vector2 (30,5)
+var destination = Vector2 (300,5)
 
 func _on_Golem_body_entered(body):
 	if body.name == "Player": 
