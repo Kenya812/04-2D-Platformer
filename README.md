@@ -9,10 +9,14 @@ Description: this is a 2D platformer where I made it where you need to parkour a
 ## Implementation
 - Multiple levels
 - 3 Enemies (One on first level and two on the second)
+- Parallax Backgrounds
+- Music and Sound Effects
 
 
 ## References
-None
+Parallax Backgrounds: https://opengameart.org/content/3-parallax-backgrounds
+Coins: https://www.fesliyanstudios.com/royalty-free-sound-effects-download/coin-272
+Music: https://patrickdearteaga.com/arcade-music/
 
 ## Future Development
 None
